@@ -3,9 +3,44 @@ body{
   font-size: 22px;
   font-family: Arial;
 }
-form input{
-  width: 250px;
+form{
+  display: table;
+}
+p{
+  display: table-row;
+}
+
+label {
+  display: table-cell;
+ }
+input{
+  display: table-cell;
   padding: 8px;
-  margin-left: 100px;
-  
+  margin: 8px;
+  font-size: 18px;
+  width: 260px;
+  font-family: Arial;
+}
+.ADD{
+  background-color:slategrey;
+  margin-top:10px;
+  font-family: Arial;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn a{
+  text-decoration: none;
+  color:black;
+  font-size: 25px;
+  cursor: pointer;
+}
+.btn{
+  border:1px solid;
+  border-radius:20px;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  background-color: slategrey;
+  margin-left: 50px;
 }

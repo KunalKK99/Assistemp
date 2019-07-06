@@ -43,30 +43,29 @@ if (isset($_POST["client"])){
 }
 
 $form = "
-<form action=\"add_emp.php\" method=\"post\">
-Enter Employee ID: <input type=\"text\" name=\"employee\"><br>
-Enter Employee Name: <input type=\"text\" name=\"name\"><br>
-Enter Fathers Name: <input type=\"text\" name=\"father\"><br>
-Enter D.O.B: <input type=\"date\" name=\"dob\"><br>
-Enter Date of Joining: <input type=\"date\" name=\"doj\"><br>
-Enter ESI no: <input type=\"text\" name=\"esi\"><br>
-Enter UAN: <input type=\"text\" name=\"uan\"><br>
-Enter Bank A/C number: <input type=\"text\" name=\"bac\"><br>
-Enter IFSC no: <input type=\"text\" name=\"ifsc\"><br>
-Enter Aadhar no: <input type=\"text\" name=\"aadhar\"><br>
-Enter Basic: <input type=\"text\" name=\"basic\"><br>
-Enter HRA: <input type=\"text\" name=\"hra\"><br>
-Enter Allowances: <input type=\"text\" name=\"allowances\"><br>
-Enter Conveyance: <input type=\"text\" name=\"conveyance\"><br>
+<form action=\"add_emp.php\" method=\"post\"><p>
+<label>Enter Employee ID:</label> <input type=\"text\" name=\"employee\" autocomplete=\"off\"><br></p><p>
+<label>Enter Employee Name: </label><input type=\"text\"name=\"name\"autocomplete=\"off\"><br></p><p>
+<label>Enter Fathers Name:</label> <input type=\"text\" name=\"father\"autocomplete=\"off\"><br><p><p>
+<label>Enter D.O.B:</label> <input type=\"date\" name=\"dob\"autocomplete=\"off\"><br></p><p>
+<label>Enter Date of Joining:</label> <input type=\"date\"name=\"doj\"autocomplete=\"off\"><br><p><p>
+<label>Enter ESI no: </label><input type=\"text\"name=\"esi\"autocomplete=\"off\"><br><p><p>
+<label>Enter UAN: </label><input type=\"text\"name=\"uan\"autocomplete=\"off\"><br><p><p>
+<label>Enter Bank A/C number: </label><input type=\"text\" name=\"bac\"autocomplete=\"off\"><br><p><p>
+<label>Enter IFSC no: </label><input type=\"text\" name=\"ifsc\"autocomplete=\"off\"><br><p><p>
+<label>Enter Aadhar no: </label><input type=\"text\" name=\"aadhar\"autocomplete=\"off\"><br><p><p>
+<label>Enter Basic:</label> <input type=\"text\" name=\"basic\"autocomplete=\"off\"><br><p><p>
+<label>Enter HRA: </label><input type=\"text\" name=\"hra\"autocomplete=\"off\"><br><p><p>
+<label>Enter Allowances: </label><input type=\"text\" name=\"allowances\"autocomplete=\"off\"><br><p><p>
+<label>Enter Conveyance: </label><input type=\"text\" name=\"conveyance\"autocomplete=\"off\"><br><p><p>
 
 <input type=\"hidden\" name=\"client\" value=".$client.">
-<input type=\"submit\" value=\"Add\">
+<input type=\"submit\" value=\"Add\" class=\"ADD  \">
 </form>
 ";
 
-echo "<br> Adding Employees in Client ".$client."<br><br><br>".$form;
-echo "<a href=\"client_emp.php?client=".$client."\">Go Back</a>";
-
+echo "<br>Adding Employees in Client ".$client."<br><br><br>".$form;
+echo "<div class=\" btn\"><a href=\"client_emp.php?client=".$client."\"   >Go Back</a>";
  ?>
 
  <!DOCTYPE html>
