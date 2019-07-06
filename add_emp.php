@@ -68,3 +68,14 @@ echo "<br> Adding Employees in Client ".$client."<br><br><br>".$form;
 echo "<a href=\"client_emp.php?client=".$client."\">Go Back</a>";
 
  ?>
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title> Entry Details</title>
+     <link rel="stylesheet" href="add_emp.css">
+   </head>
+   <body>
+   </body>
+ </html>

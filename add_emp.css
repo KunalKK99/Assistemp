@@ -1,0 +1,11 @@
+body{
+  background:#c46217;
+  font-size: 22px;
+  font-family: Arial;
+}
+form input{
+  width: 250px;
+  padding: 8px;
+  margin-left: 100px;
+  
+}

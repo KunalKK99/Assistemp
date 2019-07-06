@@ -51,13 +51,18 @@ if ($_SESSION['type'] != "admin") {
       </tr>
       ";
  }
- echo "<br><div style=\"color:black; font-family: Arial; font-size:26px; text-align: center; transform: translate(130%,0%);border-bottom:2px solid #111; margin-top:0px;\"> Showing Employees of Client ".$_GET["client"]."</div>";
+ echo "<br><div style=\"color:black; font-family: Arial;   border:1px solid black;
+   padding: 10px;
+	 width:500px;
+   border-radius: 10px;
+	 margin-left:450px;
+	 font-size:26px;text-align:center;\"> Showing Employees of Client ".$_GET["client"]."</div>";
  echo $display;
 
+echo "<div class=\"oyo\">";
+ echo "<br><div class=\"Add\"><a href=\"add_emp.php?client=".$_GET["client"]."\">Add Employees</div></a>";
 
- echo "<br><div class=\"Add\"><a href=\"add_emp.php?client=".$_GET["client"]."\">Add Employees</a>";
-
- echo "<br><div class=\"For\"><a href=\"format1.php?client=".$_GET["client"]."\">Format 1</a>";
+ echo "<br><div class=\"for\"><a href=\"format1.php?client=".$_GET["client"]."\">Format 1</a>";
  }
-
+echo "</div>";
   ?>

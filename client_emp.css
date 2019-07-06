@@ -1,3 +1,97 @@
 body{
-  
+  background:#c46217;
+}
+.in{
+  margin-top: 10px;
+  font-size: 22px;
+  font-family: Arial;
+  color: #111;
+  display: flex;
+  margin-left: 10px;
+
+}
+.in input{
+  padding: 4px;
+  font-size: 18px;
+  font-family: Arial;
+  width:250px;
+}
+.kk input{
+  margin-left: 240px;
+  margin-top:15px;
+  padding: 8px;
+  width: 100px;
+  cursor: pointer;
+  background-color: white;
+}
+table{
+  border-collapse: collapse;
+  width: 1000px;
+  font-size: 20px;
+  font-family: Arial;
+}
+table th{
+  color:black;
+  background-color:grey;
+  height: 20px;
+}
+table td a{
+  text-decoration: none;
+  color:black;
+  font-family: Arial;
+  font-size: 20px;
+  vertical-align: middle;
+}
+table td{
+  height: 30px;
+  text-align: center;
+}
+table td a:hover{
+  color:white;
+}
+.Add{
+  font-size: 20px;
+  font-family: Arial;
+  margin-left: 10px;
+  border:1px solid black;
+  border-radius: 10px;
+  width: 200px;
+  text-align:center;
+  align-items: middle;
+  background-color: #cfa5a5;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.Add a{
+  text-decoration: none;
+  color: black;
+}
+.Add:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.for{
+  font-size: 20px;
+  font-family: Arial;
+  margin-left: 900px;
+  padding: 10px;
+    background-color: #cfa5a5;
+  border:1px solid black;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  text-align: center;
+}
+.for a{
+  text-decoration: none;
+  color: black;
+}
+.for:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.oyo{
+  display:flex;
+  padding: 18px;
 }
