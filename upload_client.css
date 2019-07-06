@@ -1,0 +1,211 @@
+body{
+background-size:500% 500%;
+background:#c46217;
+}
+h1{
+font-size: 2.5em;
+text-align: center;
+margin-bottom:20px;
+font-family: Arial;
+}
+.Client_id {
+  text-align: center;
+  color:#4f0000;
+  font-size: 20px;
+  font-family:Arial;
+}
+.Client_id input{
+  width: 240px;
+  padding:5px;
+  margin-top: 15px;
+  border-color:#9fc2ff;
+  background-color: white;
+  font-size: large;
+}
+@media (max-width:768px) {
+  .Client_id{
+    margin-right:50px;
+  }
+  .Client_id input{
+    margin-left:70px;
+  }
+}
+.sec{
+  text-align: center;
+  padding: 0;
+  margin-top: 16px;
+  margin-left:21px;
+  color:#4f0000;
+  font-size: 20px;
+  font-family:Arial;
+}
+.sec select{
+background:white;
+text-align: center;
+font-size: large;
+color:black;
+width:18.5%;
+border-color:#9fc2ff;
+padding:4px;
+border-radius: 2px solid;
+box-shadow: 0 5px 25px rgba(0,0,0,.5);
+}
+@media (max-width:769px){
+.sec{
+  float: left;
+  margin-left:0px;
+  padding: 0px;
+  display: flex;
+}
+.sec select{
+  width:250px;
+    margin-left:20px;
+}
+}
+.Emp_id {
+  padding: 0px;
+  text-align: center;
+  color:black;
+  margin: 0;
+  font-size: 20px;
+  font-family:Arial;
+}
+.Emp_id input{
+  width: 220px;
+  padding:5px;
+  margin-top:10px;
+  margin-left: 10px;
+  border-color:#9fc2ff;
+}
+#pdf1{
+  width: 200px;
+  font-size: 14px;
+}
+#pdf2{
+  width: 200px;
+  font-size: 14px;
+}
+#pdf3{
+  width: 200px;
+  font-size: 14px;
+}
+@media (max-width:768px) {
+  .Emp_id{
+    margin-top: 40px;
+  }
+}
+.button {
+  border-radius: 5px;
+  background-color:slategrey;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 0px;
+  margin-left:570px;
+  padding:6px;
+  width: 300px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-color:purple;
+  cursor: pointer;
+}
+.button:hover{
+  color:white;
+  background-color: black;
+}
+@media (max-width:768px) {
+  .button{
+    padding:6px;
+    width: 200px;
+    margin-top:0px;
+    margin-left: 80px;
+  }
+}
+  .button1{
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     padding:8px;
+     font-size: 20px;
+     font-family:Arial;
+     width:150px;
+     font-style: 10px;
+     background: slategrey;
+     cursor: pointer;
+     margin-top: 80px;
+     font-size: 1.7em;
+  }
+  .button1:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  @media (max-width:768px) {
+    .button1{
+      width:35%;
+      padding: 5px;
+
+    }
+  }
+  .button2{
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     padding:8px;
+     float: right;
+     font-size: 20px;
+     font-family:Arial;
+     width:150px;
+     font-style: 10px;
+     background: slategrey;
+     cursor: pointer;
+     margin-top: 80px;
+     font-size: 1.7em;
+  }
+  .button2:hover{
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  @media (max-width:768px) {
+    .button2{
+        padding: 5px;
+      width:35%;
+    }
+  }
+
+.ff{
+  font-size: large;
+  text-align: center;
+  border: none;
+}
+.ff input{
+  font-size: large;
+  padding:6px;
+  margin-left: 250px;
+  border: none;
+  color:blue;
+  cursor: pointer;
+}
+@media (max-width:768px){
+  .ff{
+    float: right;
+    margin-right:-50px;
+  }
+}
+.yee {
+  padding: 0px;
+  color:#4f0000;
+  margin-left:35px;
+  text-align: center;
+  font-size: 20px;
+  font-family:Arial;
+}
+.yee input{
+  width: 240px;
+  padding:4px;
+  border-color:#9fc2ff;
+  background-color: white;
+font-size: large;
+}
+@media (max-width:769px){
+.yee{
+  float: left;
+  margin-left: 50px;
+  display: inline;
+}
+.yee input{
+  margin-top: 10px;
+}
+}

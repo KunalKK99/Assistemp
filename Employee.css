@@ -1,0 +1,104 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+background-color:#c46217;
+}
+
+h1{
+  color:black;
+  text-align: center;
+  font-size: 40px;
+  margin:0;
+  font-family:Arial;
+  padding: 0;
+}
+table {
+  font-family:Arial;
+  font-weight: bold;
+  font-size: 20px;
+  border-collapse: collapse;
+  width: 50%;
+  margin-top:0;
+  transform: translate(40%,5%);
+}
+@media (max-width:798px){
+  table{
+    border-collapse: collapse;
+    transform: translate(0%,5%);
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+    width: 100%;
+  }
+  h1{
+    font-size: 25px;
+    margin-top:90px;
+    border:1px solid #dfc6bd;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color: black;
+  font-size: 18px;
+}
+td a{
+  color: black;
+  text-decoration:none;
+  padding: 8px 8px;
+}
+.button1{
+  float: right;
+}
+.kk{
+  margin-top: 80px;
+}
+td i{
+  padding: 10px;
+}
+td i:hover{
+  color:#e5e5e5;
+}
+button{
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   padding:8px;
+   margin-bottom:10px;
+   font-size: 20px;
+   font-family:Arial;
+   width: 10%;
+   font-style: 10px;
+   background-color: #aaafa9;
+   color: black;
+   cursor: pointer;
+}
+button:hover{
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+@media (max-width:768px) {
+  button{
+    width: 25%;
+  }
+}
+.button2{
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   padding:8px;
+   font-size: 20px;
+   font-family:Arial;
+   width: 10%;
+   font-style: 10px;
+   background-color: #aaafa9;
+   color: black;
+   cursor: pointer;
+   float:right;
+}
+.button2:hover{
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+@media (max-width:768px) {
+  .button2{
+    width: 25%;
+    margin-bottom:50px;
+  }
+}
