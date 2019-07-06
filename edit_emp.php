@@ -29,15 +29,26 @@ if (isset($_GET["client"])) {
 		echo "Employee ".$_POST["employee"]." details uploaded successfully";
 	}
   ?>
-
- <form action="edit_emp.php" method="post">
- 	Enter Basic: <input type="text" name="basic"> <br>
-	Enter HRA: <input type="text" name="hra"> <br>
-	Enter Allowances: <input type="text" name="allowances"> <br>
-	Enter Conveyance: <input type="text" name="conveyance"> <br>
-	<input type="hidden" name="employee" value="<?php echo $emp; ?>">
-	<input type="hidden" name="client" value="<?php echo $client; ?>">
-	<input type="submit" value="Update">
- </form>
-
- <a href="client_emp.php?client=<?php echo $client ?>">Go Back</a>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Edit Salary</title>
+		<link rel="stylesheet" href="edit_emp.css">
+	</head>
+	<body>
+		<h1>Edit Salary Here</h1>
+		<form action="edit_emp.php" method="post"><p>
+		 <label>Enter Basic: </label><input type="text" name="basic"> <br></p><p>
+		 <label>Enter HRA: </label><input type="text" name="hra"> <br></p><p>
+		 <label>Enter Allowances: </label><input type="text" name="allowances"> <br></p><p>
+		 <label>Enter Conveyance: </label><input type="text" name="conveyance"> <br></p><p>
+		 <input type="hidden" name="employee" value="<?php echo $emp; ?>">
+		 <input type="hidden" name="client" value="<?php echo $client; ?>">
+		 <input type="submit" value="Update" class="ADD">
+		</form>
+	<div class="btn">
+		<a href="client_emp.php?client=<?php echo $client ?>">Go Back</a>
+	</div>
+	</body>
+</html>

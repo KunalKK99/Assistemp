@@ -1,0 +1,77 @@
+body{
+  background:#c46217;
+  font-size: 22px;
+  font-family: Arial;
+  display: inline-block;
+}
+table{
+  border-collapse: collapse;
+  width: 1000px;
+  margin-top: 30px;
+  height: 20px;
+  margin-left: 250px;
+  text-align: center;
+}
+table th{
+  background-color: slategrey;
+  height: 40px;
+}
+table td{
+  font-size: 18px;
+  height: 20px;
+}
+.mon{
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.mon select{
+  width: 200px;
+  padding: 7px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 1px solid slategrey;
+}
+.mon input{
+  padding: 6px;
+  background-color: slategrey;
+  width: 100px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: Arial;
+}
+.tab{
+  margin: 0;
+  padding: 0;
+  display:flex;
+  margin-top: 50px;
+}
+.tab th{
+  height:50px;
+  width: 1000px
+}
+
+.go a{
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: slategrey;
+}
+.no{
+  margin-top: 20px;
+}
+.no a{
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: slategrey;
+}

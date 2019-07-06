@@ -65,8 +65,9 @@ while($emp = mysqli_fetch_array($employee)) {
 
 echo $display;
 echo "
-<form action=\"format1.php\" method=\"post\">
-Month: <select name=\"month\">
+<form action=\"format1.php\" method=\"post\" >
+<div class=\"mon\">
+Month: <select name=\"month\" >
 	<option value=\"31\">January</option>
 	<option value=\"28\">Febuary</option>
 	<option value=\"31\">March</option>
@@ -82,20 +83,21 @@ Month: <select name=\"month\">
 </select>
 <input type=\"hidden\" name=\"client\" value=".$_GET['client'].">
 <input type=\"Submit\" value=\"Calculate\">
+</div>
 ";
 
 
-echo "<a href=\"client_emp.php?client=".$_GET["client"]."\">Go Back</a>";
+echo "<div class=\"go\"><a href=\"client_emp.php?client=".$_GET["client"]."\">Go Back</a>";
 }
 
 
 if(isset($_POST["client"])){
 	$client = $_POST['client'];
   $month = $_POST["month"];
-	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client'];
+	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client']." ORDER BY employee";
 	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 	$display = "
-	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"50%\">
+	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"50%\" class=\"tab\">
   <tr>
 	<th>".$month."</th>
 	<th></th>
@@ -212,8 +214,19 @@ if(isset($_POST["client"])){
 
 	echo $display;
 
-	echo "<a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
+echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
 
 }
 
  ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Salary Sheet</title>
+		<link rel="stylesheet" href="format.css">
+	</head>
+	<body>
+
+	</body>
+</html>
