@@ -49,11 +49,16 @@ table td{
   margin: 0;
   padding: 0;
   display:flex;
-  margin-top: 50px;
+  margin-top:50px;
+  width:100%;
+  border: none;
 }
 .tab th{
   height:50px;
-  width: 1000px
+}
+.tab td{
+  height: 50px;
+  padding: 6px;
 }
 
 .go a{

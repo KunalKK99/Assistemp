@@ -53,7 +53,7 @@ while($emp = mysqli_fetch_array($employee)) {
 			<td>
 			".$nodw."
 			<form action=add_days.php method=post>
-      <input type=\"text\" name=\"nodw\">
+      <input type=\"text\" name=\"nodw\" autocomplete=\"off\">
 			<input type=\"hidden\" name=\"client\" value=".$_GET['client'].">
 			<input type=\"hidden\" name=\"emp\" value=$empl>
 			<input type=\"submit\" value=\"set\">

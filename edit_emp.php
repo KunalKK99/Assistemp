@@ -39,10 +39,10 @@ if (isset($_GET["client"])) {
 	<body>
 		<h1>Edit Salary Here</h1>
 		<form action="edit_emp.php" method="post"><p>
-		 <label>Enter Basic: </label><input type="text" name="basic"> <br></p><p>
-		 <label>Enter HRA: </label><input type="text" name="hra"> <br></p><p>
-		 <label>Enter Allowances: </label><input type="text" name="allowances"> <br></p><p>
-		 <label>Enter Conveyance: </label><input type="text" name="conveyance"> <br></p><p>
+		 <label>Enter Basic: </label><input type="text" name="basic"  autocomplete="off"> <br></p><p>
+		 <label>Enter HRA: </label><input type="text" name="hra"  autocomplete="off"> <br></p><p>
+		 <label>Enter Allowances: </label><input type="text" name="allowances"  autocomplete="off"> <br></p><p>
+		 <label>Enter Conveyance: </label><input type="text" name="conveyance"  autocomplete="off"> <br></p><p>
 		 <input type="hidden" name="employee" value="<?php echo $emp; ?>">
 		 <input type="hidden" name="client" value="<?php echo $client; ?>">
 		 <input type="submit" value="Update" class="ADD">
