@@ -5,7 +5,7 @@
         body {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
-        background: #181818;
+        background:#585670;
         color: #fff;
         overflow: hidden;
         }
@@ -66,9 +66,9 @@
         width: 100%;
         border-radius: 10px;
         font-size: 20px;
-        background: #181818;
+        background:white;
         border: 1px solid #555;
-        color: #ccc;
+        color: black;
         padding: 0.5rem 1rem;
         line-height: 1.3rem;
         }
@@ -82,7 +82,7 @@
         display: block;
         border: 0;
         border-radius: 10px;
-        background: #f96816;
+        background:#4f8a96;
         color: #fff;
         text-decoration: none;
         cursor: pointer;
