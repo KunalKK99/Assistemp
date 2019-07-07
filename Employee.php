@@ -29,62 +29,26 @@ else {
       <h1>
         Assistemp Employee Portal
       </h1>
-      <table>
-        <tr>
-          <th>Month(Year)</th>
-          <th>PDF</th>
-        </tr>
-        <tr>
-          <td>Jan.(2019)</td>
-          <td><a href="file.php?month=January">Download <i class="fas fa-arrow-circle-down"></i> </a></td>
-        </tr>
-        <tr>
-          <td>Feb.(2019)</td>
-          <td><a href="file.php?month=February">Download <i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>Mar.(2019)</td>
-          <td><a href="file.php?month=March">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>Apr.(2019)</td>
-          <td><a href="file.php?month=April">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>May(2019)</td>
-          <td><a href="file.php?month=May">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>June(2019)</td>
-          <td><a href="file.php?month=June">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>July(2019)</td>
-          <td><a href="file.php?month=July">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>Aug.(2019)</td>
-          <td><a href="file.php?month=August">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>Sept.(2019)</td>
-          <td><a href="file.php?month=September">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>Oct.(2019)</td>
-          <td><a href="file.php?month=October">Download<i class="fas fa-arrow-circle-down"></i>
-</a></td>
-        </tr>
-        <tr>
-          <td>Nov.(2019)</td>
-          <td><a href="file.php?month=November">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-        <tr>
-          <td>Dec.(2019)</td>
-          <td><a href="file.php?month=December">Download<i class="fas fa-arrow-circle-down"></i></a></td>
-        </tr>
-      </table>
-			<div class="kk">
-<a href="#"><button class="button1">Next &raquo;</button></a></div>
+
+			<form action="file.php" method="get">
+				Enter Year: <input type="text" name="year"> <br><br>
+				Enter Month: <select name="month"> <br><br>
+		        <option value="January">January</option>
+		        <option value="February">February</option>
+		        <option value="March">March</option>
+		        <option value="April">April</option>
+		        <option value="May">May</option>
+		        <option value="June">June</option>
+		        <option value="July">July</option>
+		        <option value="August">August</option>
+		        <option value="September">September</option>
+		        <option value="October">October</option>
+		        <option value="November">November</option>
+		        <option value="December">December</option><br><br>
+					</select>
+				<br><br><input type="submit" name="" value="search">
+			</form>
+
+	
   </body>
 </html>

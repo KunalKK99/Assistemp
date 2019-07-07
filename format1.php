@@ -126,6 +126,7 @@ if(isset($_POST["client"])){
 	</tr>
 	";
 	$sno = 1;
+	$pf_total = 0;
 	while($emp = mysqli_fetch_array($employee)) {
 
 		  $nodw = $emp["No_of_days_worked"];
@@ -153,6 +154,8 @@ if(isset($_POST["client"])){
 
 			$PF = $PF_ratio*$Basic_Earn;
 			$PF = round($PF,2);
+			$pf_total = $pf_total + $PF;
+
 			$ESI = $ESI_ratio*$Gross_Earnings;
 			$ESI = round($ESI,2);
 
@@ -214,6 +217,21 @@ if(isset($_POST["client"])){
 
 	echo $display;
 
+	$pfchallan = "
+	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"25%\" class=\"tab\">
+  <tr>
+	<th> </th>
+	<th> Employees </th>
+	<th> Employer </th>
+	<th> Total </th>
+  </tr>
+	<tr>
+	<td> 1 </td>
+	<td> ".$pf_total." </td>
+	</tr>
+	";
+
+	echo $pfchallan;
 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
 
 }

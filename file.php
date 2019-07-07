@@ -9,12 +9,12 @@ if (!isset($_SESSION['id'])) {
 }
 
 if($_SESSION['type'] == "Employee"){
-if (!isset($_SESSION['id']) and !isset($_GET['month'])) {
+if (!isset($_SESSION['id']) and !isset($_GET['month']) and !isset($_GET['year'])) {
 	header("Location: index.html");
 	exit();
 }
 
-header("Location: files/".$_SESSION['id']."/".$_GET['month']."/Salary_Slip.pdf");
+header("Location: files/".$_SESSION['id']."/".$_GET['year']."/".$_GET['month']."/Salary_Slip.pdf");
 }
 
 else if($_SESSION['type'] == "Client"){
@@ -23,7 +23,7 @@ else if($_SESSION['type'] == "Client"){
 		exit();
 	}
 
-	header("Location: files/".$_SESSION['id']."/".$_GET['month']."/".$_GET['sample'].".pdf");
+	header("Location: files/".$_SESSION['id']."/".$_GET['year']."/".$_GET['month']."/".$_GET['sample'].".pdf");
 }
 
 

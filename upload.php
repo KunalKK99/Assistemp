@@ -12,12 +12,12 @@ if($_POST['upload']=='employee'){
 
   $month = $_POST['month'];
   $year = $_POST['year'];
-//  $file = $_POST['pdf'];
+
 
 for ($i=1; $i <= 10 ; $i++) {
 	$emp_id = $_POST["Employee_ID_$i"];
-	$target_dir = "C:/xampp/htdocs/Assistemp/files/".$emp_id."/".$month."/";
-  $target_file = $target_dir.basename($_FILES["pdf_$i"]["name"]);
+	$target_dir = "D:/xampp/htdocs/Assistemp/files/".$emp_id."/".$year."/".$month."/";
+  $target_file = $target_dir."Salary_Slip.pdf";
 
 
     if(move_uploaded_file($_FILES["pdf_$i"]["tmp_name"], $target_file)){
@@ -40,12 +40,13 @@ if($_POST['upload']=='client'){
 
 	$client_id = $_POST['Client_Id'];
   $month = $_POST['month'];
+	$year = $_POST['year'];
 
 
-	$target_dir = "C:/xampp/htdocs/Assistemp/files/".$client_id."/".$month."/";
-	$target_file_1 = $target_dir.basename($_FILES["pdf1"]["name"]);
-	$target_file_2 = $target_dir.basename($_FILES["pdf2"]["name"]);
-	$target_file_3 = $target_dir.basename($_FILES["pdf3"]["name"]);
+	$target_dir = "D:/xampp/htdocs/Assistemp/files/".$client_id."/".$year."/".$month."/";
+	$target_file_1 = $target_dir."Sample1.pdf";
+	$target_file_2 = $target_dir."Sample2.pdf";
+	$target_file_3 = $target_dir."Sample3.pdf";
 	$uploadOk =1;
 
 	if($uploadOk==1){
