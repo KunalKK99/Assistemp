@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Salary Sleep</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistemp Services</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="op.css">
 </head>
-  <body>
- <form action="login.php" method="post">
- <div class="login-box">
-   <h1>Welcome To Assistemp Services </h1>
-  <h2> Please Login Here</h2>
-  <div class="b">
-<i class="fas fa-child"></i>
-<input type="radio" name="type" value="Employee">Employee<br></div><br><br>
-<div class="c">
-<i class="fas fa-user-graduate"></i>
-<input type="radio" name="type" value="Client">Client<br><br><br>
-<i class="fas fa-user-shield"></i>
-<input type="radio" name="type" value="admin">admin<br><br>
-</div>
-<div class="textbox">
-<i class="fas fa-user"></i>
-<input type="text" placeholder="ID" name="user" autocomplete="off" required >
-</div>
-<div class="textbox">
-<i class="fas fa-lock"></i>
-<input type="password" placeholder="Password" name="pass" autocomplete="off" required >
-</div>
-<button class="button" value="Sign in"><span>Sign in </span></button>
-<!--<input type="Submit" class="btn" value="Sign in"> -->
-</div>
- </form>
-  </body>
+<body>
+    <div id="wrapper">
+        <div id="left">
+          <div id="signin">
+            <div class="logo">
+              <img src="kk.png" alt="Assistemp Services" />
+            </div>
+            <form action="login.php" method="post">
+              <div>
+              <h1 class="display-1" style="text-align:center">Welcome to Assistemp Services </h1>
+		            <h1 style="font-size:18px; text-align:center"> Please Login Here</h1>
+                <div class="radio">
+                <input type="radio" name="type" value="Employee">Employee<br><br><br>
+                <input type="radio" name="type" value="Client">Client<br><br><br>
+                <input type="radio" name="type" value="admin">admin<br><br>
+              </div>
+                <label>ID or username :</label>
+                <input type="text" name="user" placeholder="Id" class="text-input" autocomplete="off" required/>
+
+                <label>Password :</label>
+                <input type="password"  placeholder="Password" name="pass" class="text-input" autocomplete="off" required />
+
+              <button type="submit" class="primary-btn">Sign In</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
 </html>
