@@ -1,89 +1,91 @@
-@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
-
-body{
-background-color:#c46217;
+img{
+  height:100px;
+  margin: 0;
+  padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+body {
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+background:#c46217;
+color: #fff;
+overflow: hidden;
+display: inline;
 }
 h1{
   color:black;
-  text-align: center;
   font-size: 40px;
-  margin: 0;
+  margin-bottom: 50px;
+  margin-left: 430px;
   font-family:Arial;
   padding: 0;
 }
-table {
-  font-family:Arial;
-  font-size: 30px;
-  border-collapse: collapse;
-  width:50%;
-  transform: translate(40%,6%);
-}
-@media (max-width:768px) {
-  table{
-    width:100%;
-    transform: translate(0%,5%);
-     border-collapse: collapse;
-  }
-  h1{
-    font-size: 25px;
-    margin-top:90px;
-    border:1px solid #dfc6bd;
-    padding: 10px;
-    border-radius: 10px;
-}
-}
-td, th {
-  border: 1px solid #dddddd;
+@media (max-width:768px){
+h1{
+  margin-top: 100px;
+  margin-left: 0px;
   text-align: center;
-  padding: 8px;
-  font-size: 18px;
-  color: black;
+  margin-bottom: 30px;
 }
-td a{
-  color:black;
-  text-decoration:none;
-  padding: 8px 8px;
 }
 
-td i{
-  padding: 10px;
+label{
+  margin-left: 500px;
+  font-size: 24px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
 }
-td i:hover{
-  color:white;
+@media (max-width:768px) {
+label{
+  margin-left: 150px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
 }
-.button1{
-  float: right;
 }
-.kk{
-  margin-top: 80px;
+input{
+  padding: 6px;
+  font-size: 20px;
+  width: 230px;
+  margin-left: 20px;
+  font-family: Arial;
 }
-button{
+select{
+  padding: 6px;
+  margin: 6px;
+  font-size: 18px;
+  width: 225px;
+  font-family: Arial;
+}
+.button{
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    padding:8px;
    margin-bottom:10px;
    font-size: 20px;
    font-family:Arial;
-   width: 10%;
+   width: 15%;
    font-style: 10px;
    background-color: #aaafa9;
    color: black;
    cursor: pointer;
+   text-align: center;
 }
-button:hover{
+.button:hover{
  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 @media (max-width:768px) {
-  button{
-    width: 25%;
+  .button{
+    width: 35%;
   }
 }
-
 .button2{
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    padding:8px;
    font-size: 20px;
    font-family:Arial;
    width: 10%;
+   margin-right: 20px;
    font-style: 10px;
    background-color: #aaafa9;
    color: black;
@@ -95,7 +97,45 @@ button:hover{
 }
 @media (max-width:768px) {
   .button2{
-    width: 25%;
-    margin-bottom:50px;
+    width: 15%;
+
+  }
+}
+.btn{
+  text-align:center;
+  margin-right: 100px;
+}
+@media(max-width:768px){
+  .btn{
+    margin-left: 180px;
+  }
+  body{
+    justify-content: center;
+    align-items: center;
+  }
+}
+.ff a{
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+.ff{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 22px;
+  padding-right: 10px;
+}
+.up{
+  margin-top: 30px;
+  border: 1px solid black;
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  transform: translate(190%)
+}
+@media(max-width:768px){
+  .up{
+    transform: translate(80%)
   }
 }

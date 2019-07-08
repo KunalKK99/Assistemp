@@ -9,7 +9,11 @@ width:100%;
 top:0;
 left:0;
 }
-
+img{
+  height:100px;
+  margin: 0;
+  padding: 0;
+}
 .kk  input{
 margin-left: 300px;
 padding: 10px;
@@ -25,7 +29,7 @@ background:#60886f61;
 @media (max-width:768px){
   .kk input{
     padding:10px;
-    margin-left:40px;
+    margin-left:150px;
     width: 200px;
   }
 }
@@ -45,8 +49,8 @@ background:#60886f61;
 @media (max-width:768px){
   .KU input{
     padding:10px;
-    margin-left:0px;
-    margin-top:10px;
+    margin-left:100px;
+    margin-top:0;
     width: 300px;
     transform:translate(33%,0%);
   }
@@ -67,7 +71,7 @@ background:#60886f61;
   .k input{
     padding: 10px;
     margin-top: 30px;
-    margin-left:20px;
+    margin-left:130px;
     width: 200px;
   }
 }
@@ -78,11 +82,12 @@ h1{
   margin-left: 50px;
   color:black;
   text-align: center;
+  margin-top: 0;
   font-variant-caps: all-petite-caps;
 }
 .asd{
   display:flex;
-  margin-top: 80px;
+  margin-top:0px;
   padding: 30px;
 }
 @media (max-width:768px){
@@ -93,7 +98,7 @@ h1{
 button{
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    padding:8px;
-   margin-top: 240px;
+   margin-top: 220px;
    font-size: 20px;
    font-style:bold;
    font-family:Arial;
@@ -109,5 +114,6 @@ button:hover{
 @media (max-width:768px) {
   button{
     width: 25%;
+    margin-top: 190px;
   }
 }

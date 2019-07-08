@@ -26,28 +26,32 @@ else {
 <link rel="stylesheet" href="Client.css">
   </head>
   <body>
+		<img src="logo.png" alt="My Logo">
+		
       <a href="logout.php">	<button class="button2">Logout</button></a>
       <h1>
         Assistemp Client Portal
       </h1>
 
 			<form action="client.php" method="get">
-				Enter Year: <input type="text" name="year"> <br><br>
-				Enter Month: <select name="month"> <br><br>
-		        <option value="January">January</option>
-		        <option value="February">February</option>
-		        <option value="March">March</option>
-		        <option value="April">April</option>
-		        <option value="May">May</option>
-		        <option value="June">June</option>
-		        <option value="July">July</option>
-		        <option value="August">August</option>
-		        <option value="September">September</option>
-		        <option value="October">October</option>
-		        <option value="November">November</option>
-		        <option value="December">December</option><br><br>
+				<label>Enter Year: </label><input type="text" name="year" autocomplete="off"> <br><br>
+				<label>Enter Month: </label><select name="month"> <br><br>
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option><br><br>
 					</select>
-				<br><br><input type="submit" name="" value="search">
+					<div class="btn">
+						<br><br><input type="submit" name="" class="button" value="search">
+					</div>
 			</form>
 
   </body>
@@ -57,12 +61,12 @@ else {
 if(isset($_GET["month"]) and isset($_GET["year"])){
 
 $display = "
-PF1 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=Sample1'>Download</a>
+<div class=\"up\">
+<div class=\"ff\">PF1 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=Sample1'>Download</a></div>
 <br>
-PF2 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=Sample2'>Download</a>
+<div class=\"ff\">PF2 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=Sample2'>Download</a></div>
 <br>
-ESI : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=Sample3'>Download</a>
-
+<div class=\"ff\">ESI : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=Sample3'>Download</a></div></div>
 ";
 
 echo $display;

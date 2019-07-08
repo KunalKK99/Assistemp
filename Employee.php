@@ -18,21 +18,21 @@ else {
     <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Portal</title>
-<link rel="stylesheet" href="Employee.css">
+		<link rel="stylesheet" href="Employee.css">
   	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+			<img src="logo.png" alt="My Logo">
        <a href="logout.php">	<button class="button2">Logout</button></a>
       <h1>
         Assistemp Employee Portal
       </h1>
 
 			<form action="file.php" method="get">
-				Enter Year: <input type="text" name="year"> <br><br>
-				Enter Month: <select name="month"> <br><br>
+				<label>Enter Year: </label><input type="text" name="year" autocomplete="off"> <br><br>
+				<label>Enter Month: </label><select name="month"> <br><br>
 		        <option value="January">January</option>
 		        <option value="February">February</option>
 		        <option value="March">March</option>
@@ -46,9 +46,9 @@ else {
 		        <option value="November">November</option>
 		        <option value="December">December</option><br><br>
 					</select>
-				<br><br><input type="submit" name="" value="search">
+					<div class="btn">
+						<br><br><input type="submit" name="" class="button" value="search">
+					</div>
 			</form>
-
-	
   </body>
 </html>
