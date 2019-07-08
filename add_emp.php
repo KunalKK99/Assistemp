@@ -17,7 +17,7 @@ if (isset($_POST["client"])){
 
   $employee_sql = "
   INSERT INTO client_emp
-  VALUES (".$_POST["client"].", ".$_POST["employee"].", ".$_POST["basic"].", ".$_POST["hra"].", ".$_POST["allowances"].", ".$_POST["conveyance"].", 0);";
+  VALUES (NULL ,".$_POST["client"].", ".$_POST["employee"].", ".$_POST["basic"].", ".$_POST["hra"].", ".$_POST["allowances"].", ".$_POST["conveyance"].", 0, ".$_POST["pf_deduction"].");";
   $employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 
   $date1 = strtotime($_POST["dob"]);
@@ -31,7 +31,7 @@ if (isset($_POST["client"])){
   VALUES (
     ".$_POST["employee"].", ".$_POST["client"].", '".$_POST["name"]."', '".$_POST["father"]."', '".$date1."', '".$date2."', ".$_POST["esi"].", "
     .$_POST["uan"].", ".$_POST["bac"].", ".$_POST["ifsc"].", ".$_POST["aadhar"]."
-  );";
+     );";
 
   $emp_details = mysqli_query($con, $emp_details_sql) or die(mysqli_error($con));
 
@@ -59,6 +59,13 @@ $form = "
 <label>Enter Allowances: </label><input type=\"text\" name=\"allowances\"autocomplete=\"off\"><br><p><p>
 <label>Enter Conveyance: </label><input type=\"text\" name=\"conveyance\"autocomplete=\"off\"><br><p><p>
 
+Select PF Deduction: <select name=\"pf_deduction\"> <br><br>
+    <option value=\"1\">No Deduction</option>
+    <option value=\"2\">Deduction on 1500</option>
+    <option value=\"3\">Deduction on actual</option>
+    <br><br>
+    </select>
+<br><br>
 <input type=\"hidden\" name=\"client\" value=".$client.">
 <input type=\"submit\" value=\"Add\" class=\"ADD  \">
 </form>

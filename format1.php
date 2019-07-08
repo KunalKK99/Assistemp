@@ -96,6 +96,14 @@ if(isset($_POST["client"])){
   $month = $_POST["month"];
 	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client']." ORDER BY employee";
 	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
+	$pfchallan = "
+	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"25%\" class=\"tab\">
+	<tr>
+	<th> </th>
+	<th> Employee Contribution </th>
+	<th> Employer Contribution </th>
+	</tr>
+	";
 	$display = "
 	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"50%\" class=\"tab\">
   <tr>
@@ -127,6 +135,8 @@ if(isset($_POST["client"])){
 	";
 	$sno = 1;
 	$pf_total = 0;
+	$epf_wages = 0;
+	$edli_wages = 0;
 	while($emp = mysqli_fetch_array($employee)) {
 
 		  $nodw = $emp["No_of_days_worked"];
@@ -213,26 +223,72 @@ if(isset($_POST["client"])){
 			</tr>
 	    ";
 			$sno++;
+
+			if($PF>0){
+				$epf_wages = $epf_wages + $Basic_Earn;
+			}
+
+			if ($PF>0) {
+				if($Basic_Earn<15000){
+					$edli_wages = $edli_wages + $Basic_Earn;
+				}
+				elseif($Basic_Earn>15000){
+					if ($emp["pf_deduction"]==2) {
+						$edli_wages = $edli_wages + 15000;
+					}
+					elseif ($emp["pf_deduction"]==3) {
+						$edli_wages = $edli_wages + $Basic_Earn;
+					}
+				}
+			}
+
+
 	}
 
-	echo $display;
+	echo $display."<br>";
 
-	$pfchallan = "
-	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"25%\" class=\"tab\">
-  <tr>
-	<th> </th>
-	<th> Employees </th>
-	<th> Employer </th>
-	<th> Total </th>
-  </tr>
-	<tr>
-	<td> 1 </td>
-	<td> ".$pf_total." </td>
-	</tr>
-	";
+		if ((($epf_wages*0.5)/100)>500) {
+			$ec2 = ($epf_wages*0.5)/100;
+		}
+		else {
+			$ec2 = 500;
+		}
 
-	echo $pfchallan;
-echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
+		$ec3 = ($epf_wages*8.33)/100;
+		$ec3 = round($ec3,0);
+
+		$ec4 = $pf_total-$ec3;
+		$pfchallan.="
+		<tr>
+		<td>1</td>
+		<td>".$pf_total."</td>
+		<td>".$ec4."</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>0</td>
+			<td>".$ec2."</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>0</td>
+			<td>".$ec3."</td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>0</td>
+			<td>".$edli_wages."</td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		";
+
+		echo $pfchallan."<br>";
+
+	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
 
 }
 

@@ -22,7 +22,7 @@ if (isset($_GET["client"])) {
 		$emp = $_POST["employee"];
 		$update_sql = "
 		UPDATE client_emp
-		SET Basic = ".$_POST['basic'].", HRA = ".$_POST["hra"].", Allowances = ".$_POST["allowances"].", Conveyance = ".$_POST["conveyance"]."
+		SET Basic = ".$_POST['basic'].", HRA = ".$_POST["hra"].", Allowances = ".$_POST["allowances"].", Conveyance = ".$_POST["conveyance"].", pf_deduction = ".$_POST["pf_deduction"]."
 		WHERE client = '".$client."' and employee = '".$emp."' ";
 		$update = mysqli_query($con, $update_sql) or die(mysqli_error($con));
 
@@ -43,6 +43,13 @@ if (isset($_GET["client"])) {
 		 <label>Enter HRA: </label><input type="text" name="hra"  autocomplete="off"> <br></p><p>
 		 <label>Enter Allowances: </label><input type="text" name="allowances"  autocomplete="off"> <br></p><p>
 		 <label>Enter Conveyance: </label><input type="text" name="conveyance"  autocomplete="off"> <br></p><p>
+			Select PF Deduction: <select name="pf_deduction"> <br><br>
+			     <option value="1">No Deduction</option>
+			     <option value="2">Deduction on 1500</option>
+			     <option value="3">Deduction on actual</option>
+			     <br><br>
+			     </select>
+					 <br><br>
 		 <input type="hidden" name="employee" value="<?php echo $emp; ?>">
 		 <input type="hidden" name="client" value="<?php echo $client; ?>">
 		 <input type="submit" value="Update" class="ADD">
