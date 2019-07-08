@@ -9,7 +9,7 @@ width:100%;
 top:0;
 left:0;
 }
-img{
+.ii{
   height:100px;
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ background:#60886f61;
 @media (max-width:768px){
   .kk input{
     padding:10px;
-    margin-left:150px;
+    margin-left:20px;
     width: 200px;
   }
 }
@@ -52,7 +52,7 @@ background:#60886f61;
     margin-left:100px;
     margin-top:0;
     width: 300px;
-    transform:translate(33%,0%);
+    transform:translate(-5%,0%);
   }
 }
 
@@ -71,7 +71,7 @@ background:#60886f61;
   .k input{
     padding: 10px;
     margin-top: 30px;
-    margin-left:130px;
+    margin-left:0px;
     width: 200px;
   }
 }

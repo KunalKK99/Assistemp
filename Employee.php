@@ -24,7 +24,7 @@ else {
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-			<img src="logo.png" alt="My Logo">
+			<img src="logo.png"  class="ii" alt="My Logo">
        <a href="logout.php">	<button class="button2">Logout</button></a>
       <h1>
         Assistemp Employee Portal

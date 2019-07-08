@@ -20,14 +20,12 @@ else {
     <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		   	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
-		 		<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
     <title>Client Portal</title>
 <link rel="stylesheet" href="Client.css">
   </head>
   <body>
-		<img src="logo.png" alt="My Logo">
-		
+		<img src="logo.png" class="ii"alt="Assistemp Services">
+
       <a href="logout.php">	<button class="button2">Logout</button></a>
       <h1>
         Assistemp Client Portal

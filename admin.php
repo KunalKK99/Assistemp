@@ -37,7 +37,7 @@ $form = "
 		<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
 		<link rel="stylesheet" href="admin.css">
 	</head>
-	<img src="logo.png" alt="Assistemp Services">
+	<img src="logo.png" class="ii" alt="Assistemp Services">
 <h1> Upload your files here </h1>
 	<?php
 	echo $form;

@@ -29,7 +29,6 @@ h1{
   margin-bottom: 30px;
 }
 }
-
 label{
   margin-left: 500px;
   font-size: 24px;
@@ -38,7 +37,7 @@ label{
 }
 @media (max-width:768px) {
 label{
-  margin-left: 150px;
+  margin-left: 40px;
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
 }
@@ -50,12 +49,28 @@ input{
   margin-left: 20px;
   font-family: Arial;
 }
+@media(max-width:768px){
+  input{
+    font-size: 20px;
+    width: 210px;
+    margin-left: 20px;
+    font-family: Arial;
+  }
+}
 select{
   padding: 6px;
   margin: 6px;
   font-size: 18px;
   width: 225px;
   font-family: Arial;
+}
+@media (max-width:768px) {
+select{
+  font-size: 18px;
+  width: 210px;
+  margin-left:-0px;
+  font-family: Arial;
+}
 }
 .button{
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -75,7 +90,7 @@ select{
 }
 @media (max-width:768px) {
   .button{
-    width: 35%;
+    width: 45%;
   }
 }
 .button2{
@@ -96,7 +111,7 @@ select{
 }
 @media (max-width:768px) {
   .button2{
-    width: 15%;
+    width: 25%;
 
   }
 }
@@ -113,8 +128,8 @@ select{
     align-items: center;
   }
 }
-img{
-  height:100px;
+.ii{
+  height:90px;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
