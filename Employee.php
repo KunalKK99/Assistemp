@@ -9,7 +9,13 @@ if (!isset($_SESSION['id'])  or $_SESSION['type'] != "Employee") {
 }
 
 else {
-  echo "<div style=\"color:black; font-family: Arial; font-size:20px;\">Welcome ".$_SESSION['id']."</div>";
+	$employee_sql = "SELECT name from emp_details where employee = ".$_SESSION['id'];
+  $employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
+
+	while ($a = mysqli_fetch_array($employee)) {
+		$name = $a['name'];
+	}
+  echo "<div style=\"color:black; font-family: Arial; font-size:20px;\">Welcome ".$name."</div>";
 }
 ?>
 <!DOCTYPE html>

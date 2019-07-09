@@ -23,7 +23,7 @@ else if($_SESSION['type'] == "Client"){
 		exit();
 	}
 
-	header("Location: files/".$_SESSION['id']."/".$_GET['year']."/".$_GET['month']."/".$_GET['sample'].".pdf");
+	header("Location: files/".$_SESSION['id']."/".$_GET['year']."/".$_GET['month']."/".$_SESSION['id'].$_GET['sample'].".pdf");
 }
 
 

@@ -44,9 +44,9 @@ if($_POST['upload']=='client'){
 
 
 	$target_dir = "D:/xampp/htdocs/Assistemp/files/".$client_id."/".$year."/".$month."/";
-	$target_file_1 = $target_dir."Sample1.pdf";
-	$target_file_2 = $target_dir."Sample2.pdf";
-	$target_file_3 = $target_dir."Sample3.pdf";
+	$target_file_1 = $target_dir.$client_id."PF1.pdf";
+	$target_file_2 = $target_dir.$client_id."PF2.pdf";
+	$target_file_3 = $target_dir.$client_id."ESI.pdf";
 	$uploadOk =1;
 
 	if($uploadOk==1){
