@@ -60,11 +60,11 @@ if(isset($_GET["month"]) and isset($_GET["year"])){
 
 $display = "
 <div class=\"up\">
-<div class=\"ff\">PF1 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=PF1'>Download</a></div>
+<div class=\"ff\">PF1 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=PF1' target=\"_blank\">Download</a></div>
 <br>
-<div class=\"ff\">PF2 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=PF2'>Download</a></div>
+<div class=\"ff\">PF2 : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=PF2' target=\"_blank\">Download</a></div>
 <br>
-<div class=\"ff\">ESI : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=ESI'>Download</a></div></div>
+<div class=\"ff\">ESI : <a href='file.php?year=".$_GET["year"]."&month=".$_GET["month"]."&sample=ESI' target=\"_blank\">Download</a></div></div>
 ";
 
 echo $display;

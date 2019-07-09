@@ -36,7 +36,7 @@ else {
         Assistemp Employee Portal
       </h1>
 
-			<form action="file.php" method="get">
+			<form action="Employee.php" method="get">
 				<label>Enter Year: </label><input type="text" name="year" autocomplete="off"> <br><br>
 				<label>Enter Month: </label><select name="month"> <br><br>
 		        <option value="January">January</option>
@@ -58,3 +58,13 @@ else {
 			</form>
   </body>
 </html>
+
+<?php
+if (isset($_GET['month']) and isset($_GET['year'])) {
+
+$link = "
+<a href=file.php?month=".$_GET['month']."&year=".$_GET['year']." target=\"_blank\">Download Salary Slip</a>
+";
+echo $link;
+}
+ ?>
