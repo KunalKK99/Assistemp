@@ -23,6 +23,8 @@ if ($_SESSION['type'] != "admin") {
 					<input type="submit" value="Search">
 				</div>
 			</form>
+	<div class="go"><a href="admin.php">Go Back</a>
+</div>
 	 </body>
  </html>
  <?php

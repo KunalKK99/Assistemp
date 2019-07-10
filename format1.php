@@ -97,7 +97,7 @@ if(isset($_POST["client"])){
 	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client']." ORDER BY employee";
 	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 	$pfchallan = "
-	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"25%\" class=\"tab\">
+	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"25%\" class=\"last\">
 	<tr>
 	<th> </th>
 	<th> Employee Contribution </th>
@@ -295,8 +295,9 @@ if(isset($_POST["client"])){
 
 		echo $pfchallan."<br>";
 
-	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
-    echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</a>";
+	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</div></a>";
+	 echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</a>";
+
 }
 
  ?>

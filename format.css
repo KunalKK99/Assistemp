@@ -70,7 +70,7 @@ table td{
   background-color: slategrey;
 }
 .no{
-  margin-top: 20px;
+   transform: translateY(-410%);
 }
 .no a{
   text-decoration: none;
@@ -79,4 +79,9 @@ table td{
   border-radius: 10px;
   padding: 8px;
   background-color: slategrey;
+}
+.last{
+  margin-top: 250px;
+  width: 500px;
+  transform: translate(40%);
 }
