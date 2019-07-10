@@ -111,7 +111,7 @@ if(isset($_POST["client"])){
 	<th></th>
 	<th colspan=\"4\">Rate</th>
 	<th></th>
-	<th colspan=\"3\">Earnings</th>
+	<th colspan=\"4\">Earnings</th>
 	<th></th>
 	<th colspan=\"2\">Deductions</th>
 	</tr>
@@ -125,6 +125,7 @@ if(isset($_POST["client"])){
 	<th>No. of days worked</th>
 	<th>Basic</th>
 	<th>HRA</th>
+  <th>Allowances</th>
 	<th>Conveyance</th>
 	<th>Gross Earning</th>
 	<th>PF</th>
@@ -155,6 +156,9 @@ if(isset($_POST["client"])){
 
 			$Conveyance_Earn = ($nodw/$month)*$Conveyance;
 			$Conveyance_Earn = round($Conveyance_Earn,2);
+
+			$Allowances_Earn = ($nodw/$month)*$Allowances;
+			$Allowances_Earn = round($Allowances_Earn,2);
 
 			$Gross_Earnings = $Basic_Earn + $HRA_Earn + $Conveyance_Earn;
 			$Gross_Earnings = round($Gross_Earnings,2);
@@ -201,6 +205,9 @@ if(isset($_POST["client"])){
 	      </td>
 	      <td align=\"center\">
 	      ".$HRA_Earn."
+	      </td>
+				<td align=\"center\">
+	      ".$Allowances_Earn."
 	      </td>
 				<td align=\"center\">
 	      ".$Conveyance_Earn."
@@ -289,7 +296,7 @@ if(isset($_POST["client"])){
 		echo $pfchallan."<br>";
 
 	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</a>";
-
+    echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</a>";
 }
 
  ?>
