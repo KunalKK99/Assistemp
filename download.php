@@ -6,7 +6,14 @@ session_start();
 $delimiter = ",";
 $filename = $_GET['client'] ."format1". ".csv";
 $f = fopen('php://memory', 'w');
+$year = $_GET["year"];
 $month = $_GET["month"];
+if( (0 == $year % 4) and (0 != $year % 100) or (0 == $year % 400) )
+     {
+         if ($month == "28") {
+          $month = "29";
+         }
+     }
 
 $fields = array($month, '', 'Rate', 'Rate', 'Rate', 'Rate', '', 'Earnings', 'Earnings', 'Earnings', 'Earning', '', 'Deduction', 'Deduction', '', '');
 fputcsv($f, $fields, $delimiter);
