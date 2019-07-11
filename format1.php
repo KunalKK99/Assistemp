@@ -67,6 +67,7 @@ echo $display;
 echo "
 <form action=\"format1.php\" method=\"post\" >
 <div class=\"mon\">
+Year: <input type=\"text\" name=\"year\"> <br>
 Month: <select name=\"month\" >
 	<option value=\"31\">January</option>
 	<option value=\"28\">Febuary</option>
@@ -94,6 +95,13 @@ echo "<div class=\"go\"><a href=\"client_emp.php?client=".$_GET["client"]."\">Go
 if(isset($_POST["client"])){
 	$client = $_POST['client'];
   $month = $_POST["month"];
+	$year = $_POST["year"];
+	if( (0 == $year % 4) and (0 != $year % 100) or (0 == $year % 400) )
+			 {
+					 if ($month == "28") {
+					 	$month = "29";
+					 }
+			 }
 	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client']." ORDER BY employee";
 	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 	$pfchallan = "
