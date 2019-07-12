@@ -42,12 +42,23 @@ if ($_SESSION['type'] != "admin") {
   $employee_sql = "SELECT * from client_emp where client = ".$_GET['client']." ORDER BY employee";
   $employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 
+	$name_sql = "
+	SELECT name from emp_details where E
+	";
   while($emp = mysqli_fetch_array($employee)) {
       $empl = $emp["employee"];
+			$name_sql = "
+			SELECT name from emp_details where employee = ".$empl.";
+			";
+			$name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+      while($n = mysqli_fetch_array($name)){
+				$nm = $n["name"];
+			}
 
       $display .= "
       <tr>
-      <td>".$empl."</td>
+      <td>".$empl."<br>".$nm."</td>
       <td><a href = \"delete_emp.php?client=".$_GET["client"]."&employee=".$empl."\">Delete</a></td>
       <td><a href = \"edit_emp.php?client=".$_GET["client"]."&employee=".$empl."\">Edit</a></td>
       </tr>

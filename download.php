@@ -6,7 +6,14 @@ session_start();
 $delimiter = ",";
 $filename = $_GET['client'] ."format1". ".csv";
 $f = fopen('php://memory', 'w');
+$year = $_GET["year"];
 $month = $_GET["month"];
+if( (0 == $year % 4) and (0 != $year % 100) or (0 == $year % 400) )
+     {
+         if ($month == "28") {
+          $month = "29";
+         }
+     }
 
 $fields = array($month, '', 'Rate', 'Rate', 'Rate', 'Rate', '', 'Earnings', 'Earnings', 'Earnings', 'Earning', '', 'Deduction', 'Deduction', '', '');
 fputcsv($f, $fields, $delimiter);
@@ -29,6 +36,17 @@ while($emp = mysqli_fetch_array($employee)) {
   $Allowances = $emp["Allowances"];
   $Conveyance = $emp["Conveyance"];
   $DaysWorked = 0;
+
+  $name_sql = "
+  SELECT name from emp_details where employee = ".$empl.";
+  ";
+  $name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+  while($n = mysqli_fetch_array($name)){
+    $nm = $n["name"];
+  }
+
+  $empl = $empl." ".$nm;
 
   $Basic_Earn = ($nodw/$month)*$Basic;
   $Basic_Earn = round($Basic_Earn,2);

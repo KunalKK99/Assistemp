@@ -27,6 +27,16 @@ $employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 while($emp = mysqli_fetch_array($employee)) {
 	  $nodw = $emp["No_of_days_worked"];
 		$empl = $emp["employee"];
+
+		$name_sql = "
+		SELECT name from emp_details where employee = ".$empl.";
+		";
+		$name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+		while($n = mysqli_fetch_array($name)){
+			$nm = $n["name"];
+		}
+
 		$Basic = $emp["Basic"];
 		$HRA = $emp["HRA"];
 		$Allowances = $emp["Allowances"];
@@ -36,7 +46,7 @@ while($emp = mysqli_fetch_array($employee)) {
     $display .="
     <tr>
 			<td align=\"center\">
-			".$empl."
+			".$empl."<br>".$nm."
 			</td>
       <td align=\"center\">
       ".$Basic."
@@ -67,6 +77,7 @@ echo $display;
 echo "
 <form action=\"format1.php\" method=\"post\" >
 <div class=\"mon\">
+Year: <input type=\"text\" name=\"year\"> <br>
 Month: <select name=\"month\" >
 	<option value=\"31\">January</option>
 	<option value=\"28\">Febuary</option>
@@ -94,6 +105,13 @@ echo "<div class=\"go\"><a href=\"client_emp.php?client=".$_GET["client"]."\">Go
 if(isset($_POST["client"])){
 	$client = $_POST['client'];
   $month = $_POST["month"];
+	$year = $_POST["year"];
+	if( (0 == $year % 4) and (0 != $year % 100) or (0 == $year % 400) )
+			 {
+					 if ($month == "28") {
+					 	$month = "29";
+					 }
+			 }
 	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client']." ORDER BY employee";
 	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 	$pfchallan = "
@@ -142,6 +160,16 @@ if(isset($_POST["client"])){
 
 		  $nodw = $emp["No_of_days_worked"];
 			$empl = $emp["employee"];
+
+			$name_sql = "
+			SELECT name from emp_details where employee = ".$empl.";
+			";
+			$name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+			while($n = mysqli_fetch_array($name)){
+				$nm = $n["name"];
+			}
+
 			$Basic = $emp["Basic"];
 			$HRA = $emp["HRA"];
 			$Allowances = $emp["Allowances"];
@@ -183,7 +211,7 @@ if(isset($_POST["client"])){
 				".$sno."
 				</td>
 				<td align=\"center\">
-				".$empl."
+				".$empl."<br>".$nm."
 				</td>
 	      <td align=\"center\">
 	      ".$Basic."
@@ -296,7 +324,11 @@ if(isset($_POST["client"])){
 		echo $pfchallan."<br>";
 
 	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</div></a>";
+<<<<<<< HEAD
 	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
+=======
+	 echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</a>";
+>>>>>>> 3d79a6a836fe24e625bac0e31f4ff6bb54a2117e
 
 }
 
