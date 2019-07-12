@@ -26,6 +26,7 @@ else {
     <title>Employee Portal</title>
 		<link rel="stylesheet" href="Employee.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
 			<img src="logo.png"  class="ii" alt="My Logo">
@@ -61,7 +62,7 @@ else {
 if (isset($_GET['month']) and isset($_GET['year'])) {
 
 $link = "
-<a href=file.php?month=".$_GET['month']."&year=".$_GET['year']." target=\"_blank\">Download Salary Slip</a>
+<div class=\"slip\"><a href=file.php?month=".$_GET['month']."&year=".$_GET['year']." target=\"_blank\">Download Salary Slip</a>
 ";
 echo $link;
 }

@@ -48,24 +48,22 @@ $form = "
 <label>Enter Employee Name: </label><input type=\"text\"name=\"name\"autocomplete=\"off\"><br></p><p>
 <label>Enter Fathers Name:</label> <input type=\"text\" name=\"father\"autocomplete=\"off\"><br><p><p>
 <label>Enter D.O.B:</label> <input type=\"date\" name=\"dob\"autocomplete=\"off\"><br></p><p>
-<label>Enter Date of Joining:</label> <input type=\"date\"name=\"doj\"autocomplete=\"off\"><br><p><p>
-<label>Enter ESI no: </label><input type=\"text\"name=\"esi\"autocomplete=\"off\"><br><p><p>
-<label>Enter UAN: </label><input type=\"text\"name=\"uan\"autocomplete=\"off\"><br><p><p>
-<label>Enter Bank A/C number: </label><input type=\"text\" name=\"bac\"autocomplete=\"off\"><br><p><p>
-<label>Enter IFSC no: </label><input type=\"text\" name=\"ifsc\"autocomplete=\"off\"><br><p><p>
-<label>Enter Aadhar no: </label><input type=\"text\" name=\"aadhar\"autocomplete=\"off\"><br><p><p>
-<label>Enter Basic:</label> <input type=\"text\" name=\"basic\"autocomplete=\"off\"><br><p><p>
-<label>Enter HRA: </label><input type=\"text\" name=\"hra\"autocomplete=\"off\"><br><p><p>
-<label>Enter Allowances: </label><input type=\"text\" name=\"allowances\"autocomplete=\"off\"><br><p><p>
-<label>Enter Conveyance: </label><input type=\"text\" name=\"conveyance\"autocomplete=\"off\"><br><p><p>
-
-Select PF Deduction: <select name=\"pf_deduction\"> <br><br>
+<label>Enter Date of Joining:</label> <input type=\"date\"name=\"doj\"autocomplete=\"off\"><br></p><p>
+<label>Enter ESI no: </label><input type=\"text\"name=\"esi\"autocomplete=\"off\"><br></p><p>
+<label>Enter UAN: </label><input type=\"text\"name=\"uan\"autocomplete=\"off\"><br></p><p>
+<label>Enter Bank A/C number: </label><input type=\"text\" name=\"bac\"autocomplete=\"off\"><br></p><p>
+<label>Enter IFSC no: </label><input type=\"text\" name=\"ifsc\"autocomplete=\"off\"><br></p><p>
+<label>Enter Aadhar no: </label><input type=\"text\" name=\"aadhar\"autocomplete=\"off\"><br></p><p>
+<label>Enter Basic:</label> <input type=\"text\" name=\"basic\"autocomplete=\"off\"><br></p><p>
+<label>Enter HRA: </label><input type=\"text\" name=\"hra\"autocomplete=\"off\"><br></p><p>
+<label>Enter Allowances: </label><input type=\"text\" name=\"allowances\"autocomplete=\"off\"><br></p><p>
+<label>Enter Conveyance: </label><input type=\"text\" name=\"conveyance\"autocomplete=\"off\"><br></p><p>
+<label>Select PF Deduction:</label> <select name=\"pf_deduction\">
     <option value=\"1\">No Deduction</option>
     <option value=\"2\">Deduction on 1500</option>
     <option value=\"3\">Deduction on actual</option>
-    <br><br>
-    </select>
-<br><br>
+    </select><br><p><p>
+    <br>
 <input type=\"hidden\" name=\"client\" value=".$client.">
 <input type=\"submit\" value=\"Add\" class=\"ADD  \">
 </form>
