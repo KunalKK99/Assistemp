@@ -27,6 +27,16 @@ $employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 while($emp = mysqli_fetch_array($employee)) {
 	  $nodw = $emp["No_of_days_worked"];
 		$empl = $emp["employee"];
+
+		$name_sql = "
+		SELECT name from emp_details where employee = ".$empl.";
+		";
+		$name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+		while($n = mysqli_fetch_array($name)){
+			$nm = $n["name"];
+		}
+
 		$Basic = $emp["Basic"];
 		$HRA = $emp["HRA"];
 		$Allowances = $emp["Allowances"];
@@ -36,7 +46,7 @@ while($emp = mysqli_fetch_array($employee)) {
     $display .="
     <tr>
 			<td align=\"center\">
-			".$empl."
+			".$empl."<br>".$nm."
 			</td>
       <td align=\"center\">
       ".$Basic."
@@ -150,6 +160,16 @@ if(isset($_POST["client"])){
 
 		  $nodw = $emp["No_of_days_worked"];
 			$empl = $emp["employee"];
+
+			$name_sql = "
+			SELECT name from emp_details where employee = ".$empl.";
+			";
+			$name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+			while($n = mysqli_fetch_array($name)){
+				$nm = $n["name"];
+			}
+
 			$Basic = $emp["Basic"];
 			$HRA = $emp["HRA"];
 			$Allowances = $emp["Allowances"];
@@ -191,7 +211,7 @@ if(isset($_POST["client"])){
 				".$sno."
 				</td>
 				<td align=\"center\">
-				".$empl."
+				".$empl."<br>".$nm."
 				</td>
 	      <td align=\"center\">
 	      ".$Basic."

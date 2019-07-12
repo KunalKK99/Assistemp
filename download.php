@@ -37,6 +37,17 @@ while($emp = mysqli_fetch_array($employee)) {
   $Conveyance = $emp["Conveyance"];
   $DaysWorked = 0;
 
+  $name_sql = "
+  SELECT name from emp_details where employee = ".$empl.";
+  ";
+  $name = mysqli_query($con, $name_sql) or die(mysqli_error($con));
+
+  while($n = mysqli_fetch_array($name)){
+    $nm = $n["name"];
+  }
+
+  $empl = $empl." ".$nm;
+
   $Basic_Earn = ($nodw/$month)*$Basic;
   $Basic_Earn = round($Basic_Earn,2);
 
