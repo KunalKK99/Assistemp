@@ -325,7 +325,7 @@ if(isset($_POST["client"])){
 
 	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</div></a>";
 
-	// echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
+	echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
 
 	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</div></a>";
 }
