@@ -76,8 +76,8 @@ while($emp = mysqli_fetch_array($employee)) {
 echo $display;
 echo "
 <form action=\"format1.php\" method=\"post\" >
+<div class=\"year\">Year: <input type=\"text\" name=\"year\"required> <br></div>
 <div class=\"mon\">
-Year: <input type=\"text\" name=\"year\"> <br>
 Month: <select name=\"month\" >
 	<option value=\"31\">January</option>
 	<option value=\"28\">Febuary</option>
@@ -324,12 +324,10 @@ if(isset($_POST["client"])){
 		echo $pfchallan."<br>";
 
 	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</div></a>";
-<<<<<<< HEAD
-	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
-=======
-	 echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</a>";
->>>>>>> 3d79a6a836fe24e625bac0e31f4ff6bb54a2117e
 
+	// echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
+
+	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</div></a>";
 }
 
  ?>

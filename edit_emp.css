@@ -21,6 +21,14 @@ input{
   width: 200px;
   font-family: Arial;
 }
+select{
+  display: table-cell;
+  padding: 8px;
+  margin: 8px;
+  font-size: 18px;
+  width: 260px;
+  font-family: Arial;
+}
 .ADD{
   background-color:slategrey;
   margin-top:20px;
