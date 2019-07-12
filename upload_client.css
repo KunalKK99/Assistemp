@@ -128,7 +128,6 @@ box-shadow: 0 5px 25px rgba(0,0,0,.5);
      font-style: 10px;
      background: slategrey;
      cursor: pointer;
-     margin-top: 20px;
      font-size: 1.7em;
   }
   .button1:hover{
@@ -151,7 +150,6 @@ box-shadow: 0 5px 25px rgba(0,0,0,.5);
      font-style: 10px;
      background: slategrey;
      cursor: pointer;
-     margin-top: 20px;
      font-size: 1.7em;
   }
   .button2:hover{

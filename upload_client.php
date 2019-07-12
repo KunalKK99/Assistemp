@@ -22,7 +22,7 @@ if (!isset($_SESSION['id'])  or $_SESSION['type'] != "admin") {
 		<h1> Upload Client Files</h1>
     <form action="upload.php" method="post" enctype="multipart/form-data">
 			  <div class="Client_id">
-      Client ID: <input type="text" name="Client_Id"> <br></div>
+      Client ID: <input type="text" name="Client_Id" required autocomplete="off"> <br></div>
 			<div class="sec">
 	     Month: <select name="month">
         <option value="January">January</option>
