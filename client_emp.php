@@ -75,7 +75,7 @@ if ($_SESSION['type'] != "admin") {
 echo "<div class=\"oyo\">";
  echo "<br><div class=\"Add\"><a href=\"add_emp.php?client=".$_GET["client"]."\">Add Employees</div></a>";
 
- echo "<br><div class=\"for\"><a href=\"format1.php?client=".$_GET["client"]."\">Format 1</a>";
+ echo "<br><div class=\"for\"><a href=\"format1.php?client=".$_GET["client"]."&first=first"."\">Format 1</div></a>";
  }
 echo "</div>";
 

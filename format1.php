@@ -7,7 +7,14 @@ if((!isset($_GET['client']) and !isset($_POST["client"])) or $_SESSION['type'] !
 	header("Location: index.html");
 	exit();
 }
-
+if(isset($_GET["first"])) {
+	$employee_sql = "
+	UPDATE client_emp
+	SET No_of_days_worked = 0
+	WHERE client = '".$_GET['client']."'"
+	 ;
+	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
+}
 if(isset($_GET['client'])){
 	$client = $_GET['client'];
 	$display = "
