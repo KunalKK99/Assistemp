@@ -57,7 +57,7 @@ table td{
   margin: 0;
   padding: 0;
   display:flex;
-  margin-top:50px;
+  margin-top:30px;
   width:100%;
   border: none;
 }
@@ -78,7 +78,7 @@ table td{
   background-color: slategrey;
 }
 .no{
-   transform: translateY(-410%);
+   transform: translateY(-350%);
 }
 .no a{
   text-decoration: none;
@@ -89,12 +89,14 @@ table td{
   background-color: slategrey;
 }
 .last{
-  margin-top: 200px;
+  margin-top: 300px;
   width: 500px;
-  transform: translate(40%);
+  transform: translate(-40%);
 }
 .down{
   transform: translateY(1900%);
+  text-align: center;
+
 }
 .down a{
   text-decoration: none;
