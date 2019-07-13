@@ -1,3 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Salary Sheet</title>
+		<link rel="stylesheet" href="format.css">
+	</head>
+	<body>
+
+	</body>
+	<script>
+    function createPDF() {
+        var sTable = document.getElementById('tab').innerHTML;
+
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 17px Calibri;}";
+        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        style = style + "</style>";
+
+        // CREATE A WINDOW OBJECT.
+        var win = window.open('', '', 'height=700,width=700');
+
+        win.document.write('<html><head>');
+        win.document.write('<title>Profile</title>');   // <title> FOR PDF HEADER.
+        win.document.write(style);          // ADD STYLE INSIDE THE HEAD TAG.
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write(sTable);         // THE TABLE CONTENTS INSIDE THE BODY TAG.
+        win.document.write('</body></html>');
+
+        win.document.close(); 	// CLOSE THE CURRENT WINDOW.
+
+        win.print();    // PRINT THE CONTENTS.
+    }
+</script>
+</html>
+
 <?php
 include("connect.php");
 doDB();
@@ -7,6 +45,9 @@ if((!isset($_GET['client']) and !isset($_POST["client"])) or $_SESSION['type'] !
 	header("Location: index.html");
 	exit();
 }
+
+
+
 if(isset($_GET["first"])) {
 	$employee_sql = "
 	UPDATE client_emp
@@ -131,6 +172,7 @@ if(isset($_POST["client"])){
 	</tr>
 	";
 	$display = "
+	<div id=\"tab\">
 	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"50%\" class=\"tab\">
   <tr>
 	<th>".$month."</th>
@@ -203,9 +245,25 @@ if(isset($_POST["client"])){
 			$PF_ratio = (12/100);
 			$ESI_ratio = (1.75/100);
 
-			$PF = $PF_ratio*$Basic_Earn;
-			$PF = round($PF,2);
-			$pf_total = $pf_total + $PF;
+			$Pf_d = $emp["pf_deduction"];
+			if($Pf_d == "1"){
+				$PF = 0;
+				$pf_total = $pf_total + $PF;
+			}
+			if ($Pf_d == "2") {
+				$PF = $PF_ratio*15000;
+				$PF = round($PF,2);
+				$pf_total = $pf_total + $PF;
+			}
+
+				if ($Pf_d == "3") {
+					$PF = $PF_ratio*$Basic_Earn;
+					$PF = round($PF,2);
+					$pf_total = $pf_total + $PF;
+				}
+			
+
+
 
 			$ESI = $ESI_ratio*$Gross_Earnings;
 			$ESI = round($ESI,2);
@@ -337,17 +395,14 @@ if(isset($_POST["client"])){
 	//echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
 
 	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</div></a>";
+/*echo "
+<p>
+        <input type=\"button\" value=\"Create PDF\"
+            id=\"btPrint\" onclick=\"createPDF()\" />
+    </p>
+
+";*/
+
 }
 
  ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>Salary Sheet</title>
-		<link rel="stylesheet" href="format.css">
-	</head>
-	<body>
-
-	</body>
-</html>

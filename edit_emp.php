@@ -43,10 +43,10 @@ if (isset($_GET["client"])) {
 		 <label>Enter HRA: </label><input type="text" name="hra"  autocomplete="off" required> <br></p><p>
 		 <label>Enter Allowances: </label><input type="text" name="allowances"  autocomplete="off" required> <br></p><p>
 		 <label>Enter Conveyance: </label><input type="text" name="conveyance"  autocomplete="off" required> <br></p><p>
-			 <label>Select PF Deduction:</label> <select name=\"pf_deduction\">
-		       <option value=\"1\">No Deduction</option>
-		       <option value=\"2\">Deduction on 1500</option>
-		       <option value=\"3\">Deduction on actual</option>
+			 <label>Select PF Deduction:</label> <select name="pf_deduction">
+		       <option value="1">No Deduction</option>
+		       <option value="2">Deduction on 1500</option>
+		       <option value="3">Deduction on actual</option>
 		       </select><br><p><p>
 		       <br>
 		 <input type="hidden" name="employee" value="<?php echo $emp; ?>">
