@@ -11,6 +11,7 @@
 	<script>
     function createPDF() {
         var sTable = document.getElementById('tab').innerHTML;
+				var sTablep = document.getElementById('pf').innerHTML;
 
         var style = "<style>";
         style = style + "table {width: 100%;font: 17px Calibri;}";
@@ -27,6 +28,7 @@
         win.document.write('</head>');
         win.document.write('<body>');
         win.document.write(sTable);         // THE TABLE CONTENTS INSIDE THE BODY TAG.
+			win.document.write(sTablep);
         win.document.write('</body></html>');
 
         win.document.close(); 	// CLOSE THE CURRENT WINDOW.
@@ -164,6 +166,7 @@ if(isset($_POST["client"])){
 	$employee_sql = "SELECT * from client_emp where client = ".$_POST['client']." ORDER BY employee";
 	$employee = mysqli_query($con, $employee_sql) or die(mysqli_error($con));
 	$pfchallan = "
+	<div id=\"pf\">
 	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"25%\" class=\"last\">
 	<tr>
 	<th> </th>
@@ -173,7 +176,7 @@ if(isset($_POST["client"])){
 	";
 	$display = "
 	<div id=\"tab\">
-	<table cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"50%\" class=\"tab\">
+	<table id=\"tblCustomers\" cellpadding = \"3\" cellspacing = \"1\" border = \"1\" align=\"center\" width=\"50%\" class=\"tab\">
   <tr>
 	<th>".$month."</th>
 	<th></th>
@@ -261,7 +264,7 @@ if(isset($_POST["client"])){
 					$PF = round($PF,2);
 					$pf_total = $pf_total + $PF;
 				}
-			
+
 
 
 
@@ -324,6 +327,8 @@ if(isset($_POST["client"])){
 	      </td>
 			</tr>
 	    ";
+
+
 			$sno++;
 
 			if($PF>0){
@@ -346,7 +351,10 @@ if(isset($_POST["client"])){
 
 
 	}
-
+	$display.="
+</table>
+</div>
+	";
 	echo $display."<br>";
 
 		if ((($epf_wages*0.5)/100)>500) {
@@ -387,22 +395,24 @@ if(isset($_POST["client"])){
 			<td>0</td>
 		</tr>
 		";
-
+$pfchallan.="
+</table>
+</div>
+";
 		echo $pfchallan."<br>";
 
 	 echo "<div class=\"no\"><a href=\"format1.php?client=".$_POST["client"]."\">Go Back</div></a>";
 
+	 echo "
+	 <p>
+	         <input type=\"button\" value=\"Create PDF\"
+	             id=\"btPrint\" onclick=\"createPDF()\" />
+	     </p>
+	 ";
+
 	//echo "<a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."\">Download</div></a>";
 
-	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</div></a>";
-/*echo "
-<p>
-        <input type=\"button\" value=\"Create PDF\"
-            id=\"btPrint\" onclick=\"createPDF()\" />
-    </p>
-
-";*/
-
+//	 echo "<div class=\"down\"><a href=\"download.php?client=".$_POST['client']."&month=".$_POST['month']."&year=".$_POST["year"]."\">Download</div></a>";
 }
 
  ?>
