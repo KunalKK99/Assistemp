@@ -54,7 +54,7 @@ while($emp = mysqli_fetch_array($employee)) {
     $display .="
     <tr>
 			<td align=\"center\">
-			".$empl."<br>"."Name:".$nm."<br>"."s/o ".$fname."
+			".$empl."<br>".$nm."<br>"."S/o ".$fname."
 			</td>
       <td align=\"center\">
       ".$Basic."
@@ -220,7 +220,7 @@ if(isset($_POST["client"])){
 				".$sno."
 				</td>
 				<td align=\"center\">
-				".$empl."<br>"."Name:".$nm."<br>"."s/o ".$fname."
+				".$empl."<br>".$nm."<br>"."S/o ".$fname."
 				</td>
 	      <td align=\"center\">
 	      ".$Basic."
