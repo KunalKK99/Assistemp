@@ -12,7 +12,7 @@ font-family:Arial;
 .Emp_id {
   padding: 0px;
   text-align: center;
-  color:#4f0000;
+  color:black;
   margin: 0;
   font-size: 20px;
   font-family:Arial;
@@ -25,37 +25,37 @@ font-family:Arial;
   border-color:#9fc2ff;
 }
 #pdf_1{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
 #pdf_2{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
 #pdf_3{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
 #pdf_4{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
 #pdf_5{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
 #pdf_6{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
 #pdf_7{
-color:#320213;
+color:black;
 font-size: 15px;
 margin-left: 150px;
 }
@@ -136,7 +136,7 @@ margin-left: 150px;
   text-align: center;
   padding: 0;
   margin-left:70px;
-  color:#4f0000;
+  color:black;
   font-size: 20px;
   font-family:Arial;
 }
@@ -155,7 +155,7 @@ box-shadow: 0 5px 25px rgba(0,0,0,.5);
   .sec{
     padding: 0px;
     margin-right: 200px;
-    color:#4f0000;
+    color:black;
     font-size: 20px;
     font-family:Arial;
       }
@@ -165,7 +165,7 @@ box-shadow: 0 5px 25px rgba(0,0,0,.5);
 }
 .yee {
   padding: 0px;
-  color:#4f0000;
+  color:black;
   margin-left:90px;
   text-align: center;
   font-size: 20px;

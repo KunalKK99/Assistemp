@@ -56,6 +56,32 @@
         #signin .logo img {
         width: 200px;
         }
+        #signin a{
+          height: 20px;
+          line-height: 0px;
+          padding: 15px;
+          text-decoration:none;
+          color: black;
+          background-color: #4f8a96;
+          font-size: 20px;
+          font-family: Arial;
+          border: 2px solid #666;
+          margin-top: 10px;
+        }
+        @media(max-width:768px){
+          #signin a{
+  height: 20px;
+  line-height: 0px;
+  padding: 15px;
+  text-decoration:none;
+  color: black;
+  background-color: #4f8a96;
+  font-size: 20px;
+  font-family: Arial;
+  border: 2px solid #666;
+  margin-top: 10px;
+}
+        }
         #signin label {
         font-size: 1.1rem;
         line-height: 2rem;
